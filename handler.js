@@ -390,7 +390,7 @@ Untuk mematikan fitur ini, ketik
     }
     await this.sendMessage(from,'?',messageType.extendedText)
 }
-
+}
 global.dfail = (type, m, conn) => {
   let msg = {
     rowner: 'Perintah ini hanya dapat digunakan oleh _*OWWNER!1!1!*_',
