@@ -388,9 +388,7 @@ Untuk mematikan fitur ini, ketik
           return
         break
     }
-    await this.sendMessage(from, 'Maaf, karena anda menelfon bot. anda diblokir otomatis', MessageType.extendedText)
-    await this.blockUser(from, 'add')
-  }
+    await this.sendMessage(from,'?',messageType.extendedText)
 }
 
 global.dfail = (type, m, conn) => {
