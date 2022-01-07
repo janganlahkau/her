@@ -25,11 +25,13 @@ function sleep(ms) {
   let json = await res.json()
   if (!json.success) throw json
   let result = json.success.replace(/simi/gim,  'gw').replace(/pantek/gi,  kata).replace(/simsimi/gi,  'gw')
-   if (/aku tidak mengerti/gi.test(result)) return m.reply(kata)
-   await sleep(7000)
-    conn.reply(m.chat,result + ' 🗿',m)
-conn.updatePresence(m.chat, Presence.composing)
-conn.chatRead(m.chat).catch(() => { })
+   let aj = []
+   let sd = [result, aj]
+
+   const yuh = sd[Math.floor(Math.random()*sd.length)];
+  if (/aku tidak mengerti/gi.test(result)) return m.reply(kata)
+  await sleep(7000)
+    conn.reply(m.chat, yuh,m) 
             }
      } catch (e) {
      	}
@@ -37,3 +39,4 @@ conn.chatRead(m.chat).catch(() => { })
   
 }
           }
+        
